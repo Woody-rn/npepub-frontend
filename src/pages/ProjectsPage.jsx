@@ -6,7 +6,7 @@ function ProjectsPage() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/v1/projects')
+    axios.get('/api/v1/projects')
       .then(res => setProjects(res.data))
       .catch(err => console.error('Ошибка загрузки проектов:', err))
   }, [])
