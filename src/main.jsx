@@ -1,24 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { ChakraProvider, createSystem, defaultConfig } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import App from './App.jsx'
-
-const system = createSystem(defaultConfig, {
-  globalCss: {
-    'html, body': {
-      backgroundColor: 'gray.900',
-      color: 'white',
-      margin: 0,
-      padding: 0,
-    },
-  },
-})
+import theme from './theme'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider value={system}>
+      <ChakraProvider value={theme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>

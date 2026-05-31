@@ -1,13 +1,18 @@
-import { Heading, Text, VStack } from '@chakra-ui/react'
+import { VStack } from '@chakra-ui/react'
+import HeroSection from '../components/sections/HeroSection'
+import AboutSection from '../components/sections/AboutSection'
+import SkillsSection from '../components/sections/SkillsSection'
+import ProjectsSection from '../components/sections/ProjectsSection'
+import ContactsSection from '../components/sections/ContactsSection'
 
 function HomePage() {
   return (
-    <VStack gap={6} align="start">
-      <Heading size="2xl">Привет, я Java-разработчик</Heading>
-      <Text fontSize="lg" color="gray.400">
-        Создаю бэкенды на Spring Boot и разбираюсь в современном фронтенде.
-        Добро пожаловать в моё портфолио.
-      </Text>
+    <VStack gap={10} align="start">
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactsSection />
     </VStack>
   )
 }
