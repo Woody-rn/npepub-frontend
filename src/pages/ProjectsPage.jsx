@@ -1,15 +1,28 @@
 import { useState, useEffect } from 'react'
-import { Heading, SimpleGrid, Card, Button, Text, Badge, Stack, Link, VStack, For, Box } from '@chakra-ui/react'
+import { Heading, SimpleGrid, Card, Text, Badge, Stack, Link, VStack, Box } from '@chakra-ui/react'
 import axios from 'axios'
 
 function ProjectsPage() {
   const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios.get('/api/v1/projects')
-      .then(res => setProjects(res.data))
-      .catch(err => console.error('Ошибка загрузки проектов:', err))
+      .then(res => {
+        console.log('API response:', res.data)
+        setProjects(res.data)
+      })
+      .catch(err => {
+        console.error('Ошибка загрузки проектов:', err)
+      })
+      .finally(() => setLoading(false))
   }, [])
+
+  if (loading) return <Text>Загрузка...</Text>
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    return <Text>Проекты не найдены</Text>
+  }
 
   return (
     <VStack gap={6} align="start">
@@ -21,7 +34,7 @@ function ProjectsPage() {
               <Heading size="md">{project.title}</Heading>
               <Text color="gray.400">{project.description}</Text>
               <Stack direction="row" wrap="wrap">
-                {project.technologies.map(tech => (
+                {project.technologies?.map(tech => (
                   <Badge key={tech} colorPalette="teal">{tech}</Badge>
                 ))}
               </Stack>
