@@ -1,8 +1,9 @@
 import { Heading, Text, Box } from '@chakra-ui/react'
+import TerminalBox from '../TerminalBox'
 
 function HeroSection() {
     return (
-        <Box>
+        <Box w="100%">
             <Heading
                 size="2xl"
                 color="neon.yellow"
@@ -15,14 +16,7 @@ function HeroSection() {
                 Создаю бэкенды на Spring Boot и разбираюсь в современном фронтенде.
                 Добро пожаловать в моё портфолио.
             </Text>
-            <Box
-                border="1px solid"
-                borderColor="neon.blue"
-                p={4}
-                mt={4}
-                boxShadow="0 0 10px #00ffff, inset 0 0 10px #00ffff20"
-                fontFamily="mono"
-            >
+            <TerminalBox mt={4}>
                 <Text color="neon.green">
                     &gt; Статус: в разработке
                     <br />
@@ -30,7 +24,7 @@ function HeroSection() {
                     <br />
                     &gt; Стек: Java 21, Spring Boot, React
                 </Text>
-            </Box>
+            </TerminalBox>
         </Box>
     )
 }

@@ -18,20 +18,24 @@ function ProjectsPage() {
       .finally(() => setLoading(false))
   }, [])
 
-  if (loading) return <Text>Загрузка...</Text>
+  if (loading) return <Text color="gray.300">Загрузка...</Text>
 
   if (!Array.isArray(projects) || projects.length === 0) {
-    return <Text>Проекты не найдены</Text>
+    return <Text color="gray.500">Проекты не найдены</Text>
   }
 
   return (
     <VStack gap={6} align="start">
-      <Heading size="xl">Мои проекты</Heading>
+      <Heading size="xl" color="neon.blue" textShadow="0 0 10px #00ffff">
+        &gt; проекты
+      </Heading>
       <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="100%">
         {projects.map(project => (
-          <Card.Root key={project.id} bg="gray.800" borderColor="gray.700" borderWidth="1px">
+          <Card.Root key={project.id} bg="gray.900" borderColor="gray.700" borderWidth="1px"
+            _hover={{ borderColor: 'neon.blue', boxShadow: '0 0 15px #00ffff40' }}
+          >
             <Card.Body gap={4}>
-              <Heading size="md">{project.title}</Heading>
+              <Heading size="md" color="neon.yellow">{project.title}</Heading>
               <Text color="gray.400">{project.description}</Text>
               <Stack direction="row" wrap="wrap">
                 {project.technologies?.map(tech => (
@@ -42,10 +46,10 @@ function ProjectsPage() {
             <Card.Footer>
               <Stack direction="row" gap={4}>
                 {project.githubUrl && (
-                  <Link href={project.githubUrl} color="teal.300">GitHub</Link>
+                  <Link href={project.githubUrl} color="neon.blue">GitHub</Link>
                 )}
                 {project.liveUrl && (
-                  <Link href={project.liveUrl} color="teal.300">Демо</Link>
+                  <Link href={project.liveUrl} color="neon.blue">Демо</Link>
                 )}
               </Stack>
             </Card.Footer>
