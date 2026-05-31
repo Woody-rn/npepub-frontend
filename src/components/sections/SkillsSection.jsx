@@ -1,5 +1,6 @@
 import { Heading, Text, Box } from '@chakra-ui/react'
 import TerminalBox from '../TerminalBox'
+import Cursor from '../Cursor'
 
 function SkillsSection() {
     return (
@@ -25,7 +26,7 @@ function SkillsSection() {
                     <Text color="neon.yellow">[frontend]</Text>
                     <Text color="gray.300" ml={4}>React, Chakra UI, JavaScript</Text>
                 </Box>
-                <Text color="neon.green">$ █</Text>
+                <Text color="neon.green" mt={3}>$<Cursor /></Text>
             </TerminalBox>
         </Box>
     )

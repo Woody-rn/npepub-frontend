@@ -1,5 +1,6 @@
 import { Heading, Text, Box } from '@chakra-ui/react'
 import TerminalBox from '../TerminalBox'
+import Cursor from '../Cursor'
 
 function AboutSection() {
     return (
@@ -21,7 +22,7 @@ function AboutSection() {
                 <Text color="gray.300" ml={4}>
                     Люблю чистый код и SOLID.
                 </Text>
-                <Text color="neon.green" mt={3}>$ █</Text>
+                <Text color="neon.green" mt={3}>$<Cursor /></Text>
             </TerminalBox>
         </Box>
     )

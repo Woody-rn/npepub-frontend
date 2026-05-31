@@ -1,5 +1,6 @@
 import { Heading, Text, Box, Link } from '@chakra-ui/react'
 import TerminalBox from '../TerminalBox'
+import Cursor from '../Cursor'
 
 function ContactsSection() {
     return (
@@ -18,7 +19,7 @@ function ContactsSection() {
                 <Text color="gray.300" ml={4}>
                     [telegram] <Link href="https://t.me/npepub" color="neon.blue" isExternal>@npepub</Link>
                 </Text>
-                <Text color="neon.green" mt={3}>$ █</Text>
+                <Text color="neon.green" mt={3}>$<Cursor /></Text>
             </TerminalBox>
         </Box>
     )

@@ -39,6 +39,10 @@ const theme = createSystem(defaultConfig, {
             '60%': { transform: 'translate(-1px, -1px)' },
             '80%': { transform: 'translate(1px, 1px)' },
         },
+        '@keyframes blink': {
+            '0%, 100%': { opacity: 1 },
+            '50%': { opacity: 0 },
+        },
     },
 })
 
