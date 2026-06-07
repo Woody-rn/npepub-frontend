@@ -12,7 +12,19 @@ const neonLinkStyle = {
 
 function Layout() {
   return (
-    <Box minH="100vh" bg="#0a0a0a" color="white">
+    <Box minH="100vh" color="white" position="relative">
+      <Box
+        position="fixed"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        backgroundImage={`url(/bg.jpg)`}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        filter="blur(2px) brightness(0.4)"
+        zIndex={0}
+      />
       <Container maxW="container.lg" py={4}>
         <Flex
           as="nav"
@@ -43,7 +55,7 @@ function Layout() {
           </Heading>
         </Flex>
       </Container>
-      <Container maxW="container.lg" py={8}>
+      <Container maxW="container.lg" py={8} position="relative" zIndex={1}>
         <Outlet />
       </Container>
     </Box>
