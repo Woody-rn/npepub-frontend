@@ -44,6 +44,9 @@ function AdminProjectsPage() {
                         <Button colorPalette="teal" mr={3} onClick={() => navigate('/admin/projects/new')}>
                             Добавить проект
                         </Button>
+                        <Button colorPalette="teal" mr={3} onClick={() => navigate('/admin/resumes')}>
+                            Резюме
+                        </Button>
                         <Button colorPalette="gray" onClick={handleLogout}>
                             Выйти
                         </Button>

@@ -13,7 +13,7 @@ function HeroSection() {
                 &gt; Привет, я Java-разработчик
             </Heading>
             <Text fontSize="lg" color="gray.300" mt={4} maxW="600px">
-                Создаю бэкенды на Spring Boot и разбираюсь в современном фронтенде.
+                Создаю бэкенды на Spring Boot.
                 Добро пожаловать в моё портфолио.
             </Text>
             <TerminalBox mt={4}>

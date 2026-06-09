@@ -19,6 +19,9 @@ function ContactsSection() {
                 <Text color="gray.300" ml={4}>
                     [telegram] <Link href="https://t.me/npepub" color="neon.blue" isExternal>@npepub</Link>
                 </Text>
+                <Text color="gray.300" ml={4}>
+                    [resume]   <Link href="/api/v1/resume" color="neon.blue">nikitin.pdf</Link>
+                </Text>
                 <Text color="neon.green" mt={3}>$<Cursor /></Text>
             </TerminalBox>
         </Box>

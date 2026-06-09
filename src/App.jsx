@@ -7,6 +7,7 @@ import AdminLoginPage from './pages/AdminLoginPage'
 import AdminProjectsPage from './pages/AdminProjectsPage'
 import AdminProjectCreatePage from './pages/AdminProjectCreatePage'
 import AdminProjectEditPage from './pages/AdminProjectEditPage'
+import AdminResumesPage from './pages/AdminResumesPage'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
@@ -21,6 +22,11 @@ function App() {
         <Route path="projects" element={
           <ProtectedRoute>
             <AdminProjectsPage />
+          </ProtectedRoute>
+        } />
+        <Route path="resumes" element={
+          <ProtectedRoute>
+            <AdminResumesPage />
           </ProtectedRoute>
         } />
         <Route path="projects/new" element={
