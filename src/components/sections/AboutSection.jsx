@@ -9,20 +9,19 @@ function AboutSection() {
                 &gt; about.md
             </Heading>
             <TerminalBox>
-                <Text color="neon.green" mb={3}>$ cat about.txt</Text>
-                <Text color="gray.300" ml={4}>
+                <Text color="gray.300">
                     Java-разработчик с фокусом на Spring Boot и микросервисы.
                 </Text>
-                <Text color="gray.300" ml={4}>
+                <Text color="gray.300">
                     Умею строить REST API, работать с базами данных и Docker.
                 </Text>
-                <Text color="gray.300" ml={4}>
+                <Text color="gray.300">
                     Осваиваю современный фронтенд на React.
                 </Text>
-                <Text color="gray.300" ml={4}>
+                <Text color="gray.300">
                     Люблю чистый код и SOLID.
                 </Text>
-                <Text color="neon.green" mt={3}>$<Cursor /></Text>
+                <Text color="neon.green" mt={4}>$<Cursor /></Text>
             </TerminalBox>
         </Box>
     )
