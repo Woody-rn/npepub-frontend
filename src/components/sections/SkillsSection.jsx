@@ -9,24 +9,27 @@ function SkillsSection() {
                 &gt; стек_технологий
             </Heading>
             <TerminalBox>
-                <Text color="neon.green" mb={3}>$ cat skills.conf</Text>
                 <Box mb={4}>
-                    <Text color="neon.yellow">[backend]</Text>
-                    <Text color="gray.300" ml={4}>Java 21, Spring Boot, Hibernate, REST API</Text>
+                    <Text color="neon.yellow" mb={1}>[backend]</Text>
+                    <Text color="gray.300" ml={4}>Java 17/21, Spring Boot, Spring Security, Spring Data JPA, Hibernate, JOOQ, Javalin</Text>
                 </Box>
                 <Box mb={4}>
-                    <Text color="neon.yellow">[database]</Text>
-                    <Text color="gray.300" ml={4}>PostgreSQL, Liquibase, Redis</Text>
+                    <Text color="neon.yellow" mb={1}>[database]</Text>
+                    <Text color="gray.300" ml={4}>PostgreSQL, MySQL, Liquibase, H2</Text>
                 </Box>
                 <Box mb={4}>
-                    <Text color="neon.yellow">[devops]</Text>
-                    <Text color="gray.300" ml={4}>Docker, Nginx, GitHub Actions, Linux</Text>
+                    <Text color="neon.yellow" mb={1}>[testing]</Text>
+                    <Text color="gray.300" ml={4}>JUnit 5, Mockito, Spring Test, TestContainers</Text>
                 </Box>
                 <Box mb={4}>
-                    <Text color="neon.yellow">[frontend]</Text>
-                    <Text color="gray.300" ml={4}>React, Chakra UI, JavaScript</Text>
+                    <Text color="neon.yellow" mb={1}>[devops]</Text>
+                    <Text color="gray.300" ml={4}>Docker, Docker Compose, Nginx, GitHub Actions (CI/CD), Linux, Certbot</Text>
                 </Box>
-                <Text color="neon.green" mt={3}>$<Cursor /></Text>
+                <Box mb={4}>
+                    <Text color="neon.yellow" mb={1}>[frontend]</Text>
+                    <Text color="gray.300" ml={4}>React (18/19), TypeScript, Chakra UI, Zustand</Text>
+                </Box>
+                <Text color="neon.green" mt={4}>$<Cursor /></Text>
             </TerminalBox>
         </Box>
     )
